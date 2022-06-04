@@ -14,17 +14,17 @@ import sys
 
 def miniMaxSum(arr):
     # Write your code here
-    arr_sort = arr.sort()
-    min_sum = 0
-    max_sum = 0
+    arr_sum = 0
+    nmin, nmax = arr[0], arr[0]
     
-    for i in range(0, len(arr_sort)-1):
-        min_sum += int(arr_sort[i])
+    for i in arr:
+        arr_sum += i
+        if i < nmin:
+            nmin = i
+        if i > nmax:
+            nmax = i
         
-    for j in range(1, len(arr_sort)):
-        max_sum += int(arr_sort[j])
-        
-    print("{} {}".format(min_sum, max_sum))
+    print("{} {}".format(arr_sum - nmax, arr_sum - nmin))
 
 if __name__ == '__main__':
 
