@@ -42,7 +42,7 @@ function divisibleSumPairs(n, k, ar) {
         const remainder  = ar[i] % k ;
         let diff = k - remainder ;
         if (diff === k){
-            diff = 0; // means ar[i] is diversiable with k
+            diff = 0; // means ar[i] is diversible by k
         }
 
         if map.has(diff){
